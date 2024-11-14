@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> 
+    <div class="container">
+       The time is now <span id="time"></span>
+    </div>
+    <script>
+        function greet(name,text){
+            console.log("Hi "+name+" "+text);
+        }
+        intervalId = setInterval(greet,1000,"Anonymous", "Where have you been");
+        clearInterval(intervalId);
+        // When iwill set clearInterval(intervalId)t then the printing will stop because I had cleared it out before printing and if I remove clear intervalId than it will start executing
+
+function displayTime(){
+    time = new Date();
+    console.log(time);
+    document.getElementById('time').innerHTML = time;
+}
+displayTime();
+         setInterval(displayTime, 1000);
+    </script>
+</body>
+</html>
